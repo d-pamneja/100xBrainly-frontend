@@ -10,7 +10,9 @@ axios.defaults.baseURL = "https://100x-brainly-backend.vercel.app";
 axios.defaults.withCredentials = true;
 
 createRoot(document.getElementById('root')!).render(
+  <StrictMode>
     <AuthProvider>
       <App />
     </AuthProvider>
+  </StrictMode>,
 )
