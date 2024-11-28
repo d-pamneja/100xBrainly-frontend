@@ -14,7 +14,7 @@ export const GithubButton = ({text} : GithubButtonProps) => {
   const size = isSmall ? "sm" : isMedium ? "md" : "lg"
 
   const handleGithubSignIn = () => {
-    window.location.href = "https://100x-brainly.vercel.app/auth/github";
+    window.location.href = "https://100x-brainly-backend.vercel.app/auth/github";
   };
 
   return (
