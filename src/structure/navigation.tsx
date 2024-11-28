@@ -1,9 +1,9 @@
-import Home from "@/pages/home/page"
-import Login from "@/pages/login/page"
-import SignUp from "@/pages/signup/page"
-import NotFound from "@/pages/notfound/page"
-import Landing from "@/pages/(app)/page"
-import View from "@/pages/externalView/page"
+import Home from "@/pages/home"
+import Login from "@/pages/login"
+import SignUp from "@/pages/signup"
+import NotFound from "@/pages/notfound"
+import Landing from "@/pages/(app)"
+import View from "@/pages/externalView"
 
 export const nav = [
     {
