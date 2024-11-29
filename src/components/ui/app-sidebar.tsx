@@ -86,7 +86,7 @@ export function AppSidebar() {
                 <DropdownMenuTrigger asChild>
                     <NavUser user={{
                       name : user?.username || "Guest",
-                      avatar : "src/assets/avatars/male-avatar.png"
+                      avatar : "./src/assets/avatars/male-avatar.png"
                     }}/>
                 </DropdownMenuTrigger>
                     <DropdownMenuContent
