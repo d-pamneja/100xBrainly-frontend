@@ -49,9 +49,12 @@ const LinkPreview = ({ url }: { url: string }) => {
     }
   }, [url]);
 
+  const containerClasses = "flex flex-col gap-4 mt-20 relative aspect-[16/9] bg-white/10 rounded-lg";
+
   if (loading) {
     return (
-      <div className="animate-pulse flex items-start space-x-4 mt-4 bg-black/20 rounded-lg p-4 backdrop-blur-sm">
+      <div className={containerClasses}>
+        <div className="absolute inset-0 animate-pulse flex items-start space-x-4 mt-4 bg-black/20 rounded-lg p-4 backdrop-blur-sm">
         <div className="w-20 h-20 bg-gray-700 rounded" />
         <div className="flex-1 space-y-2">
           <div className="h-4 bg-gray-700 rounded w-3/4" />
@@ -59,15 +62,20 @@ const LinkPreview = ({ url }: { url: string }) => {
           <div className="h-3 bg-gray-700 rounded w-2/3" />
         </div>
       </div>
+      </div>
+      
     );
   }
 
   if (error || !previewData) {
     return (
-      <div className="flex items-center space-x-2 mt-4 text-neutral-200 bg-black/20 rounded-lg p-4 backdrop-blur-sm">
+      <div className={containerClasses}>
+        <div className="absolute inset-0 flex items-center space-x-2 mt-4 text-neutral-200 bg-black/20 rounded-lg p-4 backdrop-blur-sm">
         <AiOutlineLink className="w-5 h-5" />
         <span className="text-sm">{url}</span>
       </div>
+      </div>
+      
     );
   }
 
