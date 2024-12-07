@@ -314,7 +314,7 @@ const SkeletonFive = () => {
 
 const items = [
     {
-      title: "DocuTalk Wizard (Coming Soon)",
+      title: "DocuTalk Wizard",
       description: (
         <span className="text-sm">
           Upload and chat with your documents via AI magic.
