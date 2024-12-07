@@ -19,20 +19,19 @@ import {
     DropdownMenuTrigger,
   } from "./dropdown-menu"
 import { NavUser } from "./nav-user"
-
-import { useAuth } from "@/context/AuthContext"
+import { useAuth } from "../../context/AuthContext"
 
 
 // Menu items.
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/home",
     icon: Home,
   },
   {
     title: "Documents",
-    url: "#",
+    url: "/documents",
     icon: File,
   },
   {

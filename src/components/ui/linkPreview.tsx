@@ -34,7 +34,6 @@ const LinkPreview = ({ url }: { url: string }) => {
         if (!response.ok) throw new Error('Failed to fetch preview');
         
         const data = await response.json();
-        console.log(data)
         setPreviewData(data.data);
 
       } catch (err) {

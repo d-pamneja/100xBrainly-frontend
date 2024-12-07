@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { nav } from './structure/navigation';
 import { Toaster } from 'react-hot-toast';
 
-
 function App() {
 
   const { isLoggedIn } = useAuth()
@@ -18,7 +17,7 @@ function App() {
               {nav.map((r, i) => {
                   if (!r.isRestricted) {
                     return <Route key={i} path={r.path} element={r.element} />;
-                  } else if (r.name === "Home") {
+                  } else {
                     if(isLoggedIn){
                       return (
                         <Route
