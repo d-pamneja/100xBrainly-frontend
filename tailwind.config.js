@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const tailwindAnimatePlugin = require('tailwindcss-animate');
+
 export default {
     darkMode: ["class"],
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -86,6 +89,6 @@ export default {
 		},
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimatePlugin],
 }
 
