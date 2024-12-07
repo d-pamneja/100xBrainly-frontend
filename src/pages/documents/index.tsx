@@ -94,7 +94,7 @@ export function Header({
   const [limitExceeded,setLimitExceeded] = useState(false)
   useEffect(()=>{
     const checkLimit = ()=>{
-      if(docsInfo.length >=5){
+      if(docsInfo.length >=3){
         setLimitExceeded(true)
       }
       else{

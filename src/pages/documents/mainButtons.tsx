@@ -187,7 +187,7 @@ export const ButtonDiv = ({className,limitExceeded} : {className? : string,limit
                       />
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Only 5 document uploads allowed</p>
+                      <p>Only 3 document uploads allowed</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>              
