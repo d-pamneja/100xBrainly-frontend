@@ -152,8 +152,16 @@ export const ButtonDiv = ({className,limitExceeded} : {className? : string,limit
                 }
             }
         } catch (error : any) {
-            console.log(error)
-            return toast.error(`Could not add the document : ${error} `, { id: 'addDocument' });
+            if (error.response?.status === 504) {
+              // Handle 504 as a success (Temp Measure)
+              toast.success('Document Added Successfully (504 - Timeout)', { id: 'addDocument' });
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              // Handle other errors
+              return toast.error(`Could not add the document: ${error.message || error}`, { id: 'addDocument' });
+            }
         }
     }
 
