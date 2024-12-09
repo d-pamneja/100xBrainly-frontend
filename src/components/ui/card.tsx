@@ -143,13 +143,13 @@ export const WobbleCard = ({
   const linkButtonPos = isAuth ? "110px" : "20px"
 
   return (
-    <motion.section
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => {
-        setIsHovering(false);
-        setMousePosition({ x: 0, y: 0 });
-      }}
+    <section
+      // onMouseMove={handleMouseMove}
+      // onMouseEnter={() => setIsHovering(true)}
+      // onMouseLeave={() => {
+      //   setIsHovering(false);
+      //   setMousePosition({ x: 0, y: 0 });
+      // }}
       style={{
         transform: isHovering
           ? `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0) scale3d(1, 1, 1)`
@@ -362,7 +362,7 @@ export const WobbleCard = ({
         </div>
       </motion.div>
     </div>
-    </motion.section>
+    </section>
   );
 };
 
